@@ -48,6 +48,26 @@ public class catService {
       return catRepository.getCatByAge(age);
     }
 
+    //Add a new cats
+    public Object addNewCat(cats cat){
+        return catRepository.save(cat);
+    }
+
+    //Remove a cat from the database
+    public void removeCat(int catID){
+        catRepository.deleteById(catID);
+    }
+
+    //Update an exsiting cat in the database
+    public void updateCat(int catID, cats cat){
+        cats presentCat = (cats) getCatsByID(catID);
+        presentCat.setName(cat.getName());
+        presentCat.setBreed(cat.getBreed());
+        presentCat.setDescription(cat.getDescription());
+        presentCat.setAge(cat.getAge());
+        catRepository.save(presentCat);
+    }
+
 
 
 

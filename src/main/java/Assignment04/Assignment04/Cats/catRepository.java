@@ -12,6 +12,8 @@ public interface catRepository extends JpaRepository<cats, Integer>{
 
 
 
+    List<cats> getCatByID(int catID);
+
     List<cats> getCatByName(String name);
 
     List<cats> getCatByBreed(String breed);

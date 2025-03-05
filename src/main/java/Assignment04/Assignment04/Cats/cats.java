@@ -23,7 +23,7 @@ public class cats {
     //Constructors
     public cats(){}
     public cats(int catID, String name, String breed, String description, int age) {
-        this.catID = catID
+        this.catID = catID;
         this.name = name;
         this.breed = breed;
         this.description = description;
@@ -48,19 +48,19 @@ public class cats {
     }
 
     //Setter functions
-    public int setID(int catID){
+    public void setID(int catID){
       this.catID = catID;
     }
-    public String setName(String name){
+    public void setName(String name){
       this.name = name;
     }
-    public String setBreed(String breed){
+    public void setBreed(String breed){
       this.breed = breed;
     }
-    public String setDescription(String description){
+    public void setDescription(String description){
       this.description = description;
     }
-    public int setAge(int age){
+    public void setAge(int age){
       this.age = age;
     }
 

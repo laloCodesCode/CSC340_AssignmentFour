@@ -17,34 +17,87 @@ public class catController {
     @Autowired
     private catService service;
 
+    /**
+     *  METHOD: GET
+     * http://localhost:8080/cats/all
+     */
     @GetMapping("/all")
     public Object getAllCats(){
         return new ResponseEntity<>(service.getAllCats(),HttpStatus.OK);
     }
 
+    /**
+     * METHOD: GET
+     * IDs RANGE FROM 1-6 PICK ONE
+     * ENTER AS: http://localhost:8080/cats/{catID}
+     * EXAMPLE: http://localhost:8080/cats/1
+     */
     @GetMapping("/{catID}")
     public Object getOneCat(@PathVariable int catID){
-        return new ResponseEntity<>(service.getCatByID(catID),HttpStatus.OK);
+        return new ResponseEntity<>(service.getCatsByID(catID),HttpStatus.OK);
     }
 
+    /**
+     * METHOD: GET
+     * ENTER AS: http://localhost:8080/cats/name?search={name}
+     * EXAMPLE: http://localhost:8080/cats/name?search=Luna Cat
+     */
     @GetMapping("/name")
     public Object getCatByName(@RequestParam(name = "search", defaultValue = "") String search){
         return new ResponseEntity<>(service.getCatByName(search), HttpStatus.OK);
     }
 
+    /**
+     * METHOD: GET
+     * ENTER AS: http://localhost:8080/cats/breed/{breed}
+     * EXAMPLE: http://localhost:8080/cats/breed/Organe Cat
+     */
     @GetMapping("/breed/{breed}")
     public Object getCatByBreed(@PathVariable String breed){
         return new ResponseEntity<>(service.getCatByBreed(breed), HttpStatus.OK);
     }
 
+    /**
+     * METHOD: GET
+     * ENTER AS: http://localhost:8080/cats/description?search={description}
+     * EXAMPLE: http://localhost:8080/cats/name?search="MIAUUUUUUUUUU!!!
+     */
     @GetMapping("/description")
     public Object getCatByDescription(@RequestParam(name = "search", defaultValue = "") String search){
-        return new ResponseEntity<>(service.getCatByDescrpition(search), HttpStatus.OK);
+        return new ResponseEntity<>(service.getCatByDescription(search), HttpStatus.OK);
     }
 
+    /**
+     * METHOD: GET
+     * ENTER AS: http://localhost:8080/cats/{age}
+     * EXAMPLE: http://localhost:8080/cats/20
+     */
     @GetMapping("/age/{age}")
     public Object getCatByAge(@PathVariable int age){
-        return new ResponseEntity<>(catService.getCatByAge(age), HttpStatus.OK);
+        return new ResponseEntity<>(service.getCatsByID(age), HttpStatus.OK);
+    }
+
+    /**
+     *
+     * 
+     * 
+     */
+    @PostMapping("/new")
+    public Object addCat(@RequestBody cats cats){
+        service.addNewCat(cats);
+        return new ResponseEntity<>(service.getAllCats(), HttpStatus.CREATED);
+
+    }
+
+    /**
+     *
+     *
+     *
+     */
+    @DeleteMapping("/delete/{catID}")
+    public Object deleteCatByID(@PathVariable int catID){
+         service.removeCat(catID);
+         return new ResponseEntity<>(service.getAllCats(), HttpStatus.OK);
     }
 
 }
@@ -60,4 +113,4 @@ public class catController {
 
 
 
-}
+

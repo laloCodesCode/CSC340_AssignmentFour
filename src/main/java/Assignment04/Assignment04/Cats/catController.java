@@ -74,7 +74,7 @@ public class catController {
      */
     @GetMapping("/age/{age}")
     public Object getCatByAge(@PathVariable int age){
-        return new ResponseEntity<>(service.getCatsByID(age), HttpStatus.OK);
+        return new ResponseEntity<>(service.getCatByAge(age), HttpStatus.OK);
     }
 
     /**

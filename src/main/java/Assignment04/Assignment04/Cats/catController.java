@@ -78,9 +78,9 @@ public class catController {
     }
 
     /**
-     *
-     * 
-     * 
+     * METHOD: PUT 
+     * ENTER AS: http://localhost:8080/cats/new --data
+     * EXAMPLE:
      */
     @PostMapping("/new")
     public Object addCat(@RequestBody cats cats){
@@ -90,14 +90,28 @@ public class catController {
     }
 
     /**
-     *
-     *
-     *
+     * METHOD: DELETE
+     * ENTER AS: http://localhost:8080/cats/delete/{catID}
+     * EXAMPLE: http://localhost:8080/cats/delete/5
      */
     @DeleteMapping("/delete/{catID}")
     public Object deleteCatByID(@PathVariable int catID){
          service.removeCat(catID);
          return new ResponseEntity<>(service.getAllCats(), HttpStatus.OK);
+    }
+
+
+    /**
+    * METHOD: PUT
+    * ENTER AS: http://localhost:8080/cats/update/{catID} --data
+    * EXAMPLE: http://localhost:8080/cats/update/3 --data
+    */
+    
+    @PutMapping("/update/{catID}")
+    public Object updateCat(@PathVariable int catID, @RequestBody cats cats){
+        service.updateCat(catID,cats);
+        return new ResponseEntity<>(service.getCatsByID(catID), HttpStatus.CREATED);
+
     }
 
 }

@@ -136,6 +136,21 @@ public class catController {
     }
 
 
+    /**
+     * The new cat form
+     * @param model
+     * @return the form view
+     * ENTER AS: http://localhost:8080/cats/createForm
+     */
+    @GetMapping("/createForm")
+    public String showCreateForm(Model model){
+        cats cats = new cats();
+        model.addAttribute("catList", cats);
+        model.addAttribute("title", "Create a new Cat");
+        return "cat-create";
+    }
+
+
 
     /**
      * METHOD: PUT 

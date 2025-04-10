@@ -30,7 +30,7 @@
 <div class="container" style="margin-top: 15px;">
     <h1>${title}</h1>
     <div class="card">
-        <h5 class="card-header">${cats.name}</h5>
+        <h5 class="card-header">${cat.name}</h5>
         <div class="card-body">
             <span style="float:right"> <a href="/cats/update/${catID?c}"
                                           class="btn btn-primary">Edit Cat</a></span>

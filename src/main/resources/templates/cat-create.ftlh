@@ -26,10 +26,10 @@
 
 
 
-<!-- Creating a new cat entries START HERE --->
+ Creating a new cat entries START HERE -
 <div class ="entryContainer" style="margin-top: 15px;">
     <h1>${title}</h1>
-    <form id = "new-cat" action="/Assignment04/Assignment04/Cats/catController.java/new" method="post">
+    <form id = "new-cat" action="/cats/new" method="post">
 
         <input type="number" id="catID" name="catID" placeholder="catID"/>
         <br>
@@ -45,3 +45,18 @@
         <a href="/cats/all" class="btn btn-outline-danger" >Cancel</a>
     <form>
 </div>
+
+
+<!--<div class="container" style="margin-top: 15px;">-->
+<!--    <h1>${title}</h1>-->
+<!--    <form id="new-student" action="/cats/new" method="post">-->
+<!--        <input type="text" id="name" name="name" placeholder="Name"/>-->
+<!--        <input type="text" id="description" name="description" placeholder="description"/>-->
+<!--        <input type="number" id="age" name="age" step="0.01" placeholder="age"/>-->
+<!--        <button type="submit" class="btn btn-primary">Save</button>-->
+<!--        <a href="/cats/all" class="btn btn-outline-danger" >Cancel</a>-->
+<!--    </form>-->
+
+</div>
+</body>
+</html>

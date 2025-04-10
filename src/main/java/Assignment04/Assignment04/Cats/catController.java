@@ -51,7 +51,7 @@ public class catController {
 
     @GetMapping("/{catID}")
     public Object getOneCat(@PathVariable int catID ,Model model){
-        model.addAttribute("Cat", service.getCatsByID(catID));
+        model.addAttribute("cat", service.getCatsByID(catID));
         model.addAttribute("title", "Cat #" + catID);
         return "cat-details";
 
@@ -165,9 +165,9 @@ public class catController {
 //    }
 
     @PostMapping("/new")
-    public Object addCat(@RequestBody cats cats){
+    public Object addCat( cats cats){
         service.addNewCat(cats);
-        return "redirect:/cat/all";
+        return "redirect:/cats/all";
     }
 
 
@@ -220,9 +220,9 @@ public class catController {
 //    }
 
     @PostMapping("/update/{catID}")
-    public Object updateCat(@PathVariable int catID, @RequestBody cats cats){
+    public Object updateCat(@PathVariable int catID, cats cats){
         service.updateCat(catID, cats);
-        return "redirect:/cat/" + catID;
+        return "redirect:/cats/" + catID;
     }
 
 

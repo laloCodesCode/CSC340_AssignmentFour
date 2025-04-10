@@ -40,7 +40,7 @@
                     <p class="card-text">Age :${cat.age}</p>
                     <p class="card-text">Breed :${cat.breed}</p>
                     <p class="card-text">Descrption :${cat.description}</p>
-                    <a href="cat-update.ftlh"><button>Edit</button></a>
+                  <a href="/cats/${cat.catID?c}"><button>edit</button></a>
                 </div>
             </div>
         </div>

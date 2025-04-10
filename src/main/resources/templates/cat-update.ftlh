@@ -15,8 +15,8 @@
         <a class="navbar-brand" href="index.html">MY FAVORITE CATS</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="cat-details.ftlh">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="cat-list.ftlh">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="cat-list.ftlh">About</a></li>
             </ul>
         </div>
     </div>
@@ -61,6 +61,10 @@
 
         <a href="/cats/all" class="btn btn-outline-danger">Cancel</a>
     </form>
+
+
+
+
 
 
 </div>

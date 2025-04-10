@@ -39,12 +39,11 @@
             <p class="card-text">Breed: ${cat.breed}</p>
             <p class="card-text">Age: ${cat.age}</p>
             <p class="card-text">Description: ${cat.description}</p>
-            <a href="/cat/delete/${catID?c}" class="btn btn-danger">Delete
-                Cat</a>
-<!--            <form action="/cats/delete/${cat.catID?c}" method="post" style="display:inline;">-->
-<!--                <input type="hidden" name="_method" value="DELETE"/>-->
-<!--                <button type="submit" class="btn btn-danger">Delete Cat</button>-->
-<!--            </form>-->
+            <form action="/cats/delete/${cat.catID?c}" method="post" style="display:inline;">
+                <button type="submit" class="btn btn-danger">Delete Cat</button>
+            </form>
+
+
 
 
             <a href="/cats/all" class="btn btn-primary">Go back</a>

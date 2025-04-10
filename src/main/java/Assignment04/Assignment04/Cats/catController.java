@@ -183,7 +183,7 @@ public class catController {
 //         return new ResponseEntity<>(service.getAllCats(), HttpStatus.OK);
 //    }
 
-    @DeleteMapping("/delete/{catID}")
+    @PostMapping("/delete/{catID}")
     public Object deleteCatByID(@PathVariable int catID){
         service.removeCat(catID);
         return "redirect:/cats/all";

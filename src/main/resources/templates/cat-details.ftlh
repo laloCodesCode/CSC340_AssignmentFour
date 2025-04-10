@@ -32,8 +32,23 @@
     <div class="card">
         <h5 class="card-header">${cats.name}</h5>
         <div class="card-body">
+            <span style="float:right"> <a href="/cats/update/${catID?c}"
+                                          class="btn btn-primary">Edit Cat</a></span>
+            <h5 class="card-title">catID: ${cat.catID?c}</h5>
+            <p class="card-text">Name: ${cat.name}</p>
+            <p class="card-text">Breed: ${cat.breed}</p>
+            <p class="card-text">Age: ${cat.age}</p>
+            <p class="card-text">Description: ${cat.description}</p>
+            <a href="/cats/delete/${catID?c}" class="btn btn-danger">Delete
+                Cat</a>
+
+            <a href="/cats/all" class="btn btn-primary">Go back</a>
+        </div>
+        <div class="card-body">
 
         </div>
     </div>
 
 </div>
+</body>
+</html>

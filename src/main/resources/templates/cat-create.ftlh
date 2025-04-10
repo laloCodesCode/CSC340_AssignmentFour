@@ -32,11 +32,16 @@
     <form id = "new-cat" action="/Assignment04/Assignment04/Cats/catController.java/new" method="post">
 
         <input type="number" id="catID" name="catID" placeholder="catID"/>
+        <br>
         <input type="text" id="name" name="name" placeholder="Name"/>
+        <br>
         <input type="text" id="breed" name="breed" step="0.01" placeholder="breed"/>
+        <br>
         <input type="text" id="description" name="description" placeholder="description"/>
-        <input type="number" id="age" name="age" placeholder="age"/>
+        <br>
+        <input type="number" id="age" name="age" placeholder="age"/>\
+        <br>
         <button type="submit" class="btn btn-primary">Save</button>
-        <a href="/Cats/all" class="btn btn-outline-danger" >Cancel</a>
+        <a href="/cats/all" class="btn btn-outline-danger" >Cancel</a>
     <form>
 </div>

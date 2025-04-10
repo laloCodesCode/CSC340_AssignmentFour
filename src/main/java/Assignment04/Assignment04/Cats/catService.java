@@ -24,9 +24,13 @@ public class catService {
 
 
     //Gets cats by ID number 
-    public Object getCatsByID(int catID){
-      return catRepository.getCatByID(catID);
+//    public Object getCatsByID(int catID){
+//      return catRepository.getCatByID(catID);
+//    }
+    public cats getCatsByID(int catID){
+        return (cats) catRepository.getCatByID(catID);
     }
+
 
     //Gets Cats by Name
     public Object getCatByName(String name){

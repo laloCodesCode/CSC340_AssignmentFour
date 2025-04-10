@@ -191,6 +191,21 @@ public class catController {
 
 
 
+
+    /**
+     * METHOD: PUT
+     * ENTER AS: http://localhost:8080/cats/update/{catID} --data
+     * EXAMPLE: http://localhost:8080/cats/update/3 --data
+     */
+    @GetMapping("/updateForm/{catID}")
+    public String showUpdateForm(@PathVariable int catID, Model model){
+        model.addAttribute("cat", service.getCatsByID(catID));
+        model.addAttribute("title", "Update Cat");
+        return "cat-update";
+    }
+
+
+
     /**
     * METHOD: PUT
     * ENTER AS: http://localhost:8080/cats/update/{catID} --data
@@ -204,7 +219,7 @@ public class catController {
 //
 //    }
 
-    @PutMapping("/update/{catID}")
+    @PostMapping("/update/{catID}")
     public Object updateCat(@PathVariable int catID, @RequestBody cats cats){
         service.updateCat(catID, cats);
         return "redirect:/cat/" + catID;

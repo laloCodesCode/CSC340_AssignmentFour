@@ -12,11 +12,11 @@
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.html">MY FAVORITE CATS</a>
+        <a class="navbar-brand">MY FAVORITE CATS</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="cat-list.ftlh">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="cat-list.ftlh">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/cats/all">Home</a></li>
+<!--                <li class="nav-item"><a class="nav-link" href="cat-list.ftlh">About</a></li>-->
             </ul>
         </div>
     </div>

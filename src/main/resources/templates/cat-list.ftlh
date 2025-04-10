@@ -12,11 +12,11 @@
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.html">MY FAVORITE CATS</a>
+        <a class="navbar-brand">MY FAVORITE CATS</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/cats/all">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/cats/createForm">Add</a></li>
             </ul>
         </div>
     </div>
@@ -40,7 +40,8 @@
                     <p class="card-text">Age :${cat.age}</p>
                     <p class="card-text">Breed :${cat.breed}</p>
                     <p class="card-text">Descrption :${cat.description}</p>
-                  <a href="/cats/${cat.catID?c}"><button>edit</button></a>
+                  <a href="/cats/${cat.catID?c}"><button class="btn btn-primary">edit</button></a>
+                    <a href="/cats/${cat.catID?c}"><button class="btn btn-primary">details</button></a>
                 </div>
             </div>
         </div>

@@ -2,6 +2,11 @@ package Assignment04.Assignment04.Cats;
 
 import jakarta.persistence.*;
 
+import org.springframework.context.annotation.Configuration;
+
+
+@Configuration
+
 @Entity
 @Table(name = "cats")
 
@@ -75,3 +80,6 @@ public class cats {
 
 
 }
+
+
+

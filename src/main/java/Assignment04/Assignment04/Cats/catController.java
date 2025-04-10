@@ -186,7 +186,7 @@ public class catController {
     @DeleteMapping("/delete/{catID}")
     public Object deleteCatByID(@PathVariable int catID){
         service.removeCat(catID);
-        return "redirect:/cat/all";
+        return "redirect:/cats/all";
     }
 
 

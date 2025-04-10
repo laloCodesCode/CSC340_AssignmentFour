@@ -12,11 +12,11 @@
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.html">MY FAVORITE CATS</a>
+        <a class="navbar-brand">MY FAVORITE CATS</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="cat-details.ftlh">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/cats/all">Home</a></li>
+<!--                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>-->
             </ul>
         </div>
     </div>
@@ -26,20 +26,25 @@
 
 
 
- Creating a new cat entries START HERE -
-<div class ="entryContainer" style="margin-top: 15px;">
+<div class ="entryContainer" style="margin-top: 15px;" align="center">
     <h1>${title}</h1>
     <form id = "new-cat" action="/cats/new" method="post">
 
-        <input type="number" id="catID" name="catID" placeholder="catID"/>
+
+<!--        <h6>ID is automatically created</h6>-->
+<!--        <input type="number" id="catID" name="catID" placeholder="catID"/>-->
         <br>
+        <h6>Enter a name:</h6>
         <input type="text" id="name" name="name" placeholder="Name"/>
         <br>
+        <h6>Enter cat's breed:</h6>
         <input type="text" id="breed" name="breed" step="0.01" placeholder="breed"/>
         <br>
+        <h6>Enter the cat's description:</h6>
         <input type="text" id="description" name="description" placeholder="description"/>
         <br>
-        <input type="number" id="age" name="age" placeholder="age"/>\
+        <h6>Enter the cat's age:</h6>
+        <input type="number" id="age" name="age" placeholder="age"/>
         <br>
         <button type="submit" class="btn btn-primary">Save</button>
         <a href="/cats/all" class="btn btn-outline-danger" >Cancel</a>
@@ -57,6 +62,6 @@
 <!--        <a href="/cats/all" class="btn btn-outline-danger" >Cancel</a>-->
 <!--    </form>-->
 
-</div>
+
 </body>
 </html>

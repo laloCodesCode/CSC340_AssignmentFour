@@ -1,7 +1,9 @@
 # CSC340 Assignment Four - CRUD API 
+# CSC340 Assignment Five - MVC App
 
 ## Description 
 CRUD API for homeowork purposes
+*Update for Assignment 5: scroll to "updated URL" Section for the endpoint to use the MVC App*
 
 ## Installation (Use terminal(Mac/Linux) Use gitbash or gitGUI(Windows))
 - Copy the link for the repo from GitHub.
@@ -10,6 +12,18 @@ CRUD API for homeowork purposes
 - MUST BE RUNNING HAVE A DATABASE CREATED AND AMPPS RUNNING. 
 
 ## API endpoints
+
+*UPDATED URL:*
+Endpoint to use the MVC app 
+```
+http://localhost:8080/cats/all
+```
+*This endpoint is the only URL needed to use the MVC app*
+*all bottons inside the app work and lead to their respective endpoints whichs serve*
+*their respective purpose.*
+
+
+
 BaseURL:
 ```
 http://localhost:8080/cats

@@ -3,7 +3,8 @@
 
 ## Description 
 CRUD API for homeowork purposes
-*Update for Assignment 5: scroll to "updated URL" Section for the endpoint to use the MVC App*
+
+**Update for Assignment 5: scroll to "updated URL" Section for the endpoint to use the MVC App**
 
 ## Installation (Use terminal(Mac/Linux) Use gitbash or gitGUI(Windows))
 - Copy the link for the repo from GitHub.
@@ -13,14 +14,14 @@ CRUD API for homeowork purposes
 
 ## API endpoints
 
-*UPDATED URL:*
+**UPDATED URL:**
 Endpoint to use the MVC app 
 ```
 http://localhost:8080/cats/all
 ```
-*This endpoint is the only URL needed to use the MVC app*
-*all bottons inside the app work and lead to their respective endpoints whichs serve*
-*their respective purpose.*
+**This endpoint is the only URL needed to use the MVC app**
+**all bottons inside the app work and lead to their respective endpoints whichs serve**
+**their respective purpose.**
 
 
 
